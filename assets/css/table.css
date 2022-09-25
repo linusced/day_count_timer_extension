@@ -1,0 +1,111 @@
+table {
+    z-index: 5;
+    width: 100%
+}
+th {
+    color: var(--color-1);
+    font-size: 16px;
+    max-width: 80px;
+    padding: 5px 0
+}
+th.small {
+    font-size: 11px
+}
+td {
+    color: var(--color-1);
+    font-size: 14px;
+    max-width: 80px;
+    height: 29px;
+    white-space: nowrap
+}
+td span {
+    display: inline-block;
+    overflow-x: visible;
+    transform: translateX(0);
+    transition: transform 2.5s
+}
+tr:nth-child(odd) {
+    background: var(--color-4)
+}
+tr:nth-child(even) {
+    background: var(--color-6)
+}
+tbody tr {
+    transition: background .2s
+}
+tbody tr:hover {
+    background: var(--color-5)
+}
+thead tr:last-child th {
+    border-bottom: 4px solid var(--color-2)
+}
+#table-header {
+    font-size: 30px;
+    padding: 10px 0
+}
+.active-event {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 4px;
+    background: var(--color-2);
+    border: 3px solid var(--color-1);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .2s, color .2s
+}
+.active-event:hover:not(:checked) {
+    border-color: var(--color-3);
+    transform: scale(1.2)
+}
+.active-event:checked {
+    cursor: default;
+    background: var(--color-3)
+}
+.inactive-button.active-event:hover:not(:checked):not(:disabled) {
+    background: var(--color-2);
+    border-color: var(--color-1)
+}
+th button, td button, .inactive-button:not(input) {
+    color: var(--color-1);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transform: scale(1);
+    transition: transform .2s, color .2s
+}
+.edit-event {
+    margin-right: 6px
+}
+.delete-event {
+    margin-left: 6px
+}
+.edit-event:hover {
+    color: #0a0;
+    transform: scale(1.2)
+}
+.delete-event:hover {
+    color: #f00;
+    transform: scale(1.2)
+}
+#new-event {
+    font-size: 20px
+}
+#new-event:hover {
+    color: var(--color-3);
+    transform: scale(1.2)
+}
+.inactive-button {
+    margin: 0 5px;
+    transform: none;
+    transition: none
+}
+.inactive-button:hover {
+    color: var(--color-1);
+    transform: none !important
+}
+.inactive-button:focus, .active-event:focus {
+    outline: none !important
+}

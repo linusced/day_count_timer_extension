@@ -1,0 +1,22 @@
+{
+    "name": "Day-Count Timer Extension",
+    "version": "2.2",
+    "manifest_version": 2,
+    "description": "Counts the amount of days since or until a specified date (or multiple dates).",
+    "permissions": [
+        "storage"
+    ],
+    "browser_action": {
+        "default_popup": "./popup.html",
+        "default_icon": "./assets/images/icon.png"
+    },
+    "background": {
+        "scripts": [
+            "./assets/js/background.js"
+        ],
+        "persistent": true
+    },
+    "icons": {
+        "128": "./assets/images/icon.png"
+    }
+}

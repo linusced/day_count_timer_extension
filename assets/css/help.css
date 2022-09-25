@@ -1,0 +1,97 @@
+#help-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 15px 10px;
+    background: var(--color-2);
+    border: 2px solid var(--color-1);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px var(--color-1);
+    z-index: 6;
+    width: 250px;
+    overflow: visible
+}
+#help-container * {
+    z-index: 7
+}
+#help-container h2 {
+    text-transform: capitalize;
+    margin-bottom: 5px
+}
+#help-container p {
+    font-size: 13px;
+    color: var(--color-1);
+    max-height: 80px;
+    overflow-y: auto
+}
+#help-container h2 {
+    font-size: 20px
+}
+#help-container h2::after {
+    content: ' ('attr(data-progress)')'
+}
+#help-container .button-submit {
+    font-size: 18px
+}
+#help-container #help-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    overflow: visible
+}
+#help-container #help-buttons button {
+    margin: 0
+}
+#help-container i {
+    position: absolute;
+    color: var(--color-2);
+    text-shadow: 6px -6px 6px var(--color-1);
+    overflow: visible;
+    font-size: 40px;
+    z-index: 6;
+    top: -16px;
+    bottom: auto;
+    left: auto;
+    right: -16px
+}
+#help-container i.fa-rotate-90 {
+    top: auto;
+    bottom: -16px;
+    left: auto;
+    right: -16px
+}
+#help-container i.fa-rotate-180 {
+    top: auto;
+    bottom: -16px;
+    left: -16px;
+    right: auto
+}
+#help-container i.fa-rotate-270 {
+    top: -16px;
+    bottom: auto;
+    left: -16px;
+    right: auto
+}
+#help-container .progress {
+    position: relative;
+    height: 20px;
+    width: 70%;
+    background: var(--color-1);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transform: translateY(-4px)
+}
+#help-container .progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: var(--color-3);
+    transition: width 1s
+}

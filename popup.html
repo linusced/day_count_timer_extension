@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="./assets/css/table.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+    <link rel="stylesheet" href="./assets/css/help.css">
+    <script src="./assets/js/primary.js"></script>
+    <script src="./assets/js/help.js"></script>
+    <title>Day-Count Timer</title>
+</head>
+
+<body>
+    <main>
+        <h1>Day-Count Timer</h1>
+        <h3></h3>
+        <h4></h4>
+        <nav>
+            <button id="help-btn" class="fas fa-question" title="Show help menu"></button>
+            <button id="options-btn" class="fas fa-cog" title="Change options"></button>
+        </nav>
+    </main>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5" id="table-header">Events:</th>
+            </tr>
+            <tr>
+                <th id="active-event-col"></th>
+                <th>Days</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th><button id="new-event" class="fas fa-plus-circle" title="Create a new event"></button></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <form class="hidden" data-event-index="-1" id="event-form">
+        <div>
+            <h2>event:</h2>
+            <input type="text" name="title" placeholder="Title" title="Event title">
+            <input type="date" name="date" required title="Event date">
+            <button type="submit" class="button-submit" title="Save / create event">event</button>
+            <button type="reset" class="button-reset fas fa-times" title="Close"></button>
+        </div>
+    </form>
+    <form class="hidden" id="options-form">
+        <div>
+            <h2>Options:</h2>
+            <div class="form-group">
+                <label for="options-displayNextEvent">Always display the next upcoming event:</label>
+                <input type="checkbox" name="displayNextEvent" id="options-displayNextEvent">
+            </div>
+            <div class="form-group">
+                <label for="options-colorTheme">Color theme:</label>
+                <select name="colorTheme" id="options-colorTheme">
+                    <option value="auto">Auto</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <button type="submit" class="button-submit" title="Save / create event">Save options</button>
+            <button type="reset" class="button-reset fas fa-times" title="Close"></button>
+        </div>
+    </form>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
